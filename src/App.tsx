@@ -45,13 +45,13 @@ function App() {
 
   return (
     <>
-      <main className="app-bg bg-no-repeat flex items-center justify-center flex-col sm:pb-24 sm:px-32 pb-16 px-8" >
+      <main className="app-bg bg-[url('assets/bg.webp')] h-screen w-full bg-no-repeat flex items-center justify-center flex-col sm:pb-24 sm:px-32 pb-16 px-8" >
         <img src={logo} alt="" className='mb-8 mt-3 ' width={150} />
         {activeInsult &&
           <Transition nodeRef={nodeRef} in={transitionControl} timeout={transitionDuration
           }>
             {state => (
-              <section className="  mt-auto mb-auto  text-gray-100 w-full sm:w-4/6 transition-all  ease-in-out " style={{ ...transitionStyles[state] }}>
+              <section className="  mt-auto mb-auto bg-cover  text-gray-100 w-full sm:w-4/6 transition-all  ease-in-out " style={{ ...transitionStyles[state] }}>
                 <h3 className='tracking-widest sm:text-3xl/10  text-xl/10 '>{activeInsult.insult}</h3>
                 <div className="insult-after flex items-center flex-row  mt-6 w-full">
                   <div className="line  bg-white grow mr-2  opacity-20 h-0.5"></div>
